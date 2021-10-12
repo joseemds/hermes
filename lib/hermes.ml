@@ -1,4 +1,4 @@
-let () =
+let server =
   Dream.run
   @@ Dream.router [
        Dream.get "/healthcheck" (fun _ -> Dream.respond ~code: 200 "")

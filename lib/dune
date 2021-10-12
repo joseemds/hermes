@@ -1,0 +1,4 @@
+(library
+ (name hermes)
+ (libraries dream)
+)
