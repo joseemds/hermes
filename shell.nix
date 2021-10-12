@@ -8,4 +8,19 @@ let
   hermesDrvs = lib.filterAttrs (_: value: lib.isDerivation value) hermesPkgs;
 
 in with pkgs;
-(mkShell { buildInputs = ((with ocamlPackages; [ dune utop dream ])); })
+(mkShell {
+  buildInputs = (with ocamlPackages; [
+
+    # Development packages
+    git
+    ocaml-lsp
+    findlib
+    dune
+    utop
+
+    # Dependencies
+    ocaml
+    dream
+  ]);
+
+})
