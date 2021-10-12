@@ -1,0 +1,4 @@
+(test
+ (name test_hermes)
+ (modules test_hermes)
+ (libraries hermes dream))

@@ -21,6 +21,7 @@ in with pkgs;
     # Dependencies
     ocaml
     dream
+    alcotest
   ]);
 
 })
