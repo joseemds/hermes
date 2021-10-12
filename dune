@@ -1,0 +1,3 @@
+(executable
+  (name hermes)
+  (libraries dream))
