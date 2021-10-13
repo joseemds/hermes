@@ -1,1 +1,1 @@
-let () = Hermes.server
+let () = Hermes.server ()
