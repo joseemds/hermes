@@ -1,14 +1,15 @@
 { release-mode ? false }:
 
 let
-  pkgs = import ./sources.nix { };
-  inherit (pkgs) lib;
+  pkgs = import ./nix/sources.nix { };
+  inherit (pkgs) stdenv lib;
   hermesPkgs =
-    pkgs.recurseIntoAttrs (import ./sources.nix { inherit pkgs; });
+    pkgs.recurseIntoAttrs (import ./nix { inherit pkgs; });
   hermesDrvs = lib.filterAttrs (_: value: lib.isDerivation value) hermesPkgs;
 
 in with pkgs;
 (mkShell {
+  inputsFrom = lib.attrValues hermesDrvs;
   buildInputs = (with ocamlPackages; [
 
     # Development packages
@@ -18,11 +19,7 @@ in with pkgs;
     dune
     utop
     ocamlformat
-
-    # Dependencies
     ocaml
-    dream
-    alcotest
   ]);
 
 })
