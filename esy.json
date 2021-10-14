@@ -5,7 +5,8 @@
     "ocaml": "4.12.x"
   },
   "devDependencies": {
-    "@opam/ocaml-lsp-server": "*"
+    "@opam/ocaml-lsp-server": "*",
+    "@opam/ocamlformat": "0.19.x",
+    "@opam/alcotest": "1.4.x"
   }
-
 }

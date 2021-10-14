@@ -4,7 +4,7 @@ let
   pkgs = import ./sources.nix { };
   inherit (pkgs) lib;
   hermesPkgs =
-    pkgs.recurseIntoAttrs (import ./sources.nix { inherit pkgs; }).native;
+    pkgs.recurseIntoAttrs (import ./sources.nix { inherit pkgs; });
   hermesDrvs = lib.filterAttrs (_: value: lib.isDerivation value) hermesPkgs;
 
 in with pkgs;
@@ -17,6 +17,7 @@ in with pkgs;
     findlib
     dune
     utop
+    ocamlformat
 
     # Dependencies
     ocaml

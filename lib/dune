@@ -1,4 +1,3 @@
 (library
  (name hermes)
- (libraries dream)
-)
+ (libraries dream))
