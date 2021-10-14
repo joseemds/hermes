@@ -17,6 +17,6 @@
         - uses: cachix/cachix-action@v10
           with:
             name: hermes-ci
-            signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
+            authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
         - name: "Run nix build"
           run: nix-build ./nix/ci/test.nix --argstr ocamlVersion ${{ matrix.ocamlVersion }}
