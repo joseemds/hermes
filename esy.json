@@ -1,12 +1,19 @@
 {
+  "name": "hermes",
+  "version": "0.0.1",
   "dependencies": {
-    "@opam/dream": "1.0.0~alpha2",
+    "@opam/dream": "*",
     "@opam/dune": "^2.0",
     "ocaml": "4.12.x"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "*",
-    "@opam/ocamlformat": "0.19.x",
-    "@opam/alcotest": "1.4.x"
+    "@opam/alcotest": "1.4.0",
+    "@opam/alcotest-lwt": "1.4.0",
+    "@opam/piaf": "0.1.0"
+  },
+  "resolutions": {
+    "@opam/dream": "aantron/dream:dream.opam#d54b466"
   }
+
 }
