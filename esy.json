@@ -10,7 +10,8 @@
     "@opam/caqti-lwt": "1.6.0",
     "@opam/caqti-driver-postgresql": "1.6.0",
     "@opam/archi": "*",
-    "@opam/archi-lwt": "*"
+    "@opam/archi-lwt": "*",
+    "@opam/conf-libev": "*"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "*",
@@ -21,7 +22,8 @@
   "resolutions": {
     "@opam/dream": "aantron/dream:dream.opam#d54b466",
     "@opam/archi": "anmonteiro/archi:archi.opam#0da4d3f",
-    "@opam/archi-lwt": "anmonteiro/archi:archi-lwt.opam#0da4d3f"
+    "@opam/archi-lwt": "anmonteiro/archi:archi-lwt.opam#0da4d3f",
+    "@opam/conf-libev": "esy-packages/libev:package.json#0817b2d"
   },
   "scripts": {
     "test": "esy b dune runtest",
