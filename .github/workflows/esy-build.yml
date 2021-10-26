@@ -19,7 +19,8 @@
       - name: Install esy
         run: npm install -g esy
       - uses: esy/github-action@v1
-        with: ${{ hashFiles('esy.lock/index.json') }}
+        with:
+          cache-key: ${{ hashFiles('esy.lock/index.json') }}
 
       - name: Check formatted
         run: esy check-formatted
