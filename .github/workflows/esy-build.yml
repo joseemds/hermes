@@ -1,0 +1,28 @@
+name: Build using esy
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+  jobs:
+    linux:
+      runs-on: ubuntu-latest
+
+      steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install esy
+        run: npm install -g esy
+      - uses: esy/github-actions@v1
+        with: ${{ hashFiles('esy.lock/index.json') }}
+
+      - name: Check formatted
+        run: esy check-formatted
+
+      - name: Run tests
+        run: esy test
