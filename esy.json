@@ -2,9 +2,15 @@
   "name": "hermes",
   "version": "0.0.1",
   "dependencies": {
+    "ocaml": "4.12.x",
     "@opam/dream": "*",
     "@opam/dune": "^2.0",
-    "ocaml": "4.12.x"
+    "@opam/ppx_rapper": "3.0.0",
+    "@opam/caqti": "1.6.0",
+    "@opam/caqti-lwt": "1.6.0",
+    "@opam/caqti-driver-postgresql": "1.6.0",
+    "@opam/archi": "*",
+    "@opam/archi-lwt": "*"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "*",
@@ -13,7 +19,9 @@
     "@opam/piaf": "0.1.0"
   },
   "resolutions": {
-    "@opam/dream": "aantron/dream:dream.opam#d54b466"
+    "@opam/dream": "aantron/dream:dream.opam#d54b466",
+    "@opam/archi": "anmonteiro/archi:archi.opam#0da4d3f",
+    "@opam/archi-lwt": "anmonteiro/archi:archi-lwt.opam#0da4d3f"
   }
 
 }
