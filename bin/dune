@@ -1,3 +1,4 @@
 (executable
- (name run)
- (libraries hermes))
+ (name main)
+ (modules main)
+ (libraries hermes archi-lwt))

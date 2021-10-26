@@ -1,0 +1,5 @@
+(library
+ (name hermes_database)
+ (public_name hermes.database)
+ (modules migrations connection)
+ (libraries caqti-lwt caqti-driver-postgresql))

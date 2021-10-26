@@ -1,5 +1,5 @@
 (library
  (name hermes)
- (libraries dream)
+ (libraries dream hermes_database)
  (preprocess
   (pps lwt_ppx)))

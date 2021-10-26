@@ -1,3 +1,5 @@
+module Database = Hermes_database
+
 let health_check_handler _ = Dream.empty `OK
 
 let subscribe_handler request =
@@ -7,8 +9,8 @@ let subscribe_handler request =
         (Format.sprintf "Email is: %s, name is: %s" email name)
   | _ -> Dream.respond ~code:400 "Something went wrong"
 
-let server () =
-  Dream.run @@ Dream.logger
+let server ~stop =
+  Dream.serve ~stop @@ Dream.logger
   @@ Dream.router
        [
          Dream.get "/health_check" health_check_handler;
