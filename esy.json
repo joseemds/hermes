@@ -22,6 +22,10 @@
     "@opam/dream": "aantron/dream:dream.opam#d54b466",
     "@opam/archi": "anmonteiro/archi:archi.opam#0da4d3f",
     "@opam/archi-lwt": "anmonteiro/archi:archi-lwt.opam#0da4d3f"
+  },
+  "scripts": {
+    "test": "esy b dune runtest",
+    "check-formatted": "esy b dune build @fmt"
   }
 
 }
