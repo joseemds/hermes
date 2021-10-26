@@ -1,3 +1,5 @@
+module Database = Hermes_database
+
 let health_check_handler _ = Dream.empty `OK
 
 let subscribe_handler request =
