@@ -21,6 +21,8 @@
       - uses: esy/github-action@v1
         with:
           cache-key: ${{ hashFiles('esy.lock/index.json') }}
+      - name: Install libev
+        run: sudo apt install libev -y
 
       - name: Check formatted
         run: esy check-formatted
