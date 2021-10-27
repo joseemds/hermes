@@ -10,7 +10,8 @@
         "val": "/usr/lib64/pkgconfig:$PKG_CONFIG_PATH",
         "scope": "global"
       }
-    },
+    }
+  },
   "dependencies": {
     "ocaml": "4.12.x",
     "@opam/dream": "*",
