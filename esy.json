@@ -1,6 +1,16 @@
 {
   "name": "hermes",
   "version": "0.0.1",
+  "esy": {
+    "buildEnv": {
+      "PKG_CONFIG_PATH": "/usr/lib64/pkgconfig:$PKG_CONFIG_PATH"
+    },
+    "exportedEnv": {
+      "PKG_CONFIG_PATH": {
+        "val": "/usr/lib64/pkgconfig:$PKG_CONFIG_PATH",
+        "scope": "global"
+      }
+    },
   "dependencies": {
     "ocaml": "4.12.x",
     "@opam/dream": "*",
