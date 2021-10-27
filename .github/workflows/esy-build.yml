@@ -22,7 +22,7 @@
         with:
           cache-key: ${{ hashFiles('esy.lock/index.json') }}
       - name: Install libev
-        run: sudo apt install libev -y
+        run: sudo apt install libev-dev -y
 
       - name: Check formatted
         run: esy check-formatted
