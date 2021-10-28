@@ -12,6 +12,8 @@ in with pkgs;
   buildInputs = [
     postgresql
     git
+    inotify-tools
+    curl
   ] ++  (with ocamlPackages; [
 
     # Development packages
