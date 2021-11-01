@@ -6,6 +6,18 @@
         - main
   jobs:
     linux:
+    services:
+      pg:
+        image: postgres:14
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+        ports:
+          - 5432:5432
+        volumes:
+          - /var/run/postgresql:/var/run/postgresql
       runs-on: ubuntu-latest
       strategy:
         fail-fast: false
