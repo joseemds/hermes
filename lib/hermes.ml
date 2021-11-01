@@ -31,7 +31,7 @@ let subscribe_handler request =
 
 let server ~stop =
   Dream.serve ~stop @@ Dream.logger
-  @@ Dream.sql_pool "postgres://"
+  @@ Dream.sql_pool "postgres://postgres:postgres@localhost:5432"
   @@ Dream.router
        [
          Dream.get "/health_check" health_check_handler;
