@@ -11,7 +11,7 @@ let test_subscribe_with_valid_data () =
   let body = "name=le%20guin&email=ursula_le_guin%40gmail.com" in
   let headers = [ ("Content-Type", "application/x-www-form-urlencoded") ] in
   let request = Dream.request ~headers ~method_:`POST body in
-  let response = Dream.test ( (Dream.sql_pool "postgres://postgres:postgres@locahost:5432" ) @@ handler) request in
+  let response = Dream.test ( (Dream.sql_pool "postgres://postgres:postgres@localhost:5432" ) @@ handler) request in
   Alcotest.(check int)
     "return status code 200" 200
     (Dream.status response |> Dream.status_to_int)
