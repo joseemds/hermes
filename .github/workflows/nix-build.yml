@@ -10,8 +10,6 @@
         pg:
           image: postgres:14
           env:
-            POSTGRES_HOST: localhost
-            POSTGRES_USER: postgres
             POSTGRES_PASSWORD: postgres
           options: >-
             --health-cmd pg_isready
@@ -19,7 +17,7 @@
             --health-timeout 5s
             --health-retries 10
           ports:
-            - 5432:5432
+            - 5432/tcp
           volumes:
             - /var/run/postgresql:/var/run/postgresql
       runs-on: ubuntu-latest
