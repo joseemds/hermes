@@ -10,8 +10,7 @@ let subscribe_handler request =
   let query =
     [%rapper
       execute
-        {sql|
-     INSERT INTO subscriptions (id, email, name, subscribed_at)
+        {sql| INSERT INTO subscriptions (id, email, name, subscribed_at)
       VALUES (%Uuid{id}::uuid, %string{email}, %string{name}, %ptime{subscribed_at})
     |sql}]
   in
@@ -31,7 +30,7 @@ let subscribe_handler request =
 
 let server ~stop =
   Dream.serve ~stop @@ Dream.logger
-  @@ Dream.sql_pool "postgres://postgres:postgres@localhost:5432"
+  @@ Dream.sql_pool "postgresql://postgres:postgres@localhost:5432"
   @@ Dream.router
        [
          Dream.get "/health_check" health_check_handler;
