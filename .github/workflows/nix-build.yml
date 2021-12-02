@@ -19,7 +19,7 @@
             --health-timeout 5s
             --health-retries 10
           ports:
-            - 5432/tcp
+            - 5432:5432
       runs-on: ubuntu-latest
       strategy:
         fail-fast: false
