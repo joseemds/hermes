@@ -16,6 +16,8 @@ in stdenv.mkDerivation {
     dirs = [ "lib" "test" ];
     files = [ ".ocamlformat" "hermes.opam" "dune-project" "dune" ];
   };
+
+  inputString = builtins.unsafeDiscardStringContext hermesDrvs.outPath
   dontBuild = true;
   outputHashMode = "flat";
   outputHashAlgo = "sha256";
