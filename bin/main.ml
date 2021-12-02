@@ -35,7 +35,8 @@ module WebServer = struct
 
   let stop server = Lwt.return (Lwt.wakeup_later server.promise_to_stop ())
 
-  let component = Component.using ~start ~stop ~dependencies: [Migrations.component]
+  let component =
+    Component.using ~start ~stop ~dependencies:[ Migrations.component ]
 end
 
 let system =

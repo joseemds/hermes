@@ -25,7 +25,7 @@ let subscribe_handler request =
       | Ok _ ->
           Dream.respond ~status:`OK
             (Format.sprintf "Email is: %s, name is: %s" email name)
-      | Error e -> failwith (Caqti_error.show e) )
+      | Error e -> failwith (Caqti_error.show e))
   | _ -> Dream.respond ~code:400 "Something went wrong"
 
 let server ~stop =
