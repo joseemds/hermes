@@ -17,6 +17,9 @@ in stdenv.mkDerivation {
     files = [ ".ocamlformat" "hermes.opam" "dune-project" "dune" ];
   };
   dontBuild = true;
+  outputHashMode = "flat";
+  outputHashAlgo = "sha256";
+  outputHash = builtins.hashString "sha256" inputString;
   installPhase = ''
     touch $out
   '';
