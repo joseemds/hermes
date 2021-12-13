@@ -3,13 +3,7 @@
   "version": "0.0.1",
   "esy": {
     "buildEnv": {
-      "PKG_CONFIG_PATH": "/usr/lib64/pkgconfig:$PKG_CONFIG_PATH"
-    },
-    "exportedEnv": {
-      "PKG_CONFIG_PATH": {
-        "val": "/usr/lib64/pkgconfig:$PKG_CONFIG_PATH",
-        "scope": "global"
-      }
+     "LD_LIBRARY_PATH": "#{@opam/conf-libffi.lib}:$LD_LIBRARY_PATH"
     }
   },
   "dependencies": {
@@ -17,12 +11,14 @@
     "@opam/dream": "*",
     "@opam/dune": "^2.0",
     "@opam/ppx_rapper": "3.0.0",
+    "@opam/ppx_rapper_lwt": "3.0.0",
     "@opam/caqti": "1.6.0",
     "@opam/caqti-lwt": "1.6.0",
     "@opam/caqti-driver-postgresql": "1.6.0",
     "@opam/archi": "*",
     "@opam/archi-lwt": "*",
-    "@opam/conf-libev": "*"
+    "@opam/conf-libffi": "*",
+    "@opam/conf-postgresql": "*"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "*",
@@ -30,17 +26,16 @@
     "@opam/ocamlfind": "*",
     "@opam/alcotest": "1.4.0",
     "@opam/alcotest-lwt": "1.4.0",
-    "@opam/piaf": "0.1.0"
+    "@opam/piaf": "0.1.0",
+    "@opam/conf-libev": "*"
   },
   "resolutions": {
     "@opam/dream": "aantron/dream:dream.opam#d54b466",
     "@opam/archi": "anmonteiro/archi:archi.opam#0da4d3f",
     "@opam/archi-lwt": "anmonteiro/archi:archi-lwt.opam#0da4d3f",
-    "@opam/conf-libev": "esy-packages/libev:package.json#0817b2d"
-  },
-  "scripts": {
-    "test": "esy b dune runtest",
-    "check-formatted": "esy b dune build @fmt"
+    "@opam/conf-libev": "esy-packages/libev:package.json#0817b2d",
+    "esy-openssl": "esy-packages/esy-openssl#619ae2d46ca981ec26ab3287487ad98b157a01d1",
+    "@opam/conf-libffi": "ManasJayanth/esy-libffi:esy.json#dbfe621a314ac7c9336bebe80b1e84e39c40045d",
+    "@opam/conf-postgresql": "ManasJayanth/esy-postgres:esy.json#33cb05104f6c0eff27fab5c5317be773cb14c384"
   }
-
 }

@@ -13,7 +13,7 @@ let test_subscribe_with_valid_data () =
   let request = Dream.request ~headers ~method_:`POST body in
   let response =
     Dream.test
-      (Dream.sql_pool "postgresql://postgres:postgres@localhost:5432" @@ handler)
+      (Dream.sql_pool "postgresql://postgres:postgres@localhost:5432/postgres" @@ handler)
       request
   in
   Alcotest.(check int)
