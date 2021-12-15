@@ -1,8 +1,0 @@
-{
-  "esy": {
-    "build": "psql --version"
-  },
-  "dependencies": {
-    "postgresql": "*"
-  }
-}

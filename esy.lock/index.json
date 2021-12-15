@@ -1,5 +1,5 @@
 {
-  "checksum": "cc238f9ccfe4ac69fdfab36b8ff900dd",
+  "checksum": "ee63fdcdbe29c15e9c9ab5c92bbe01a4",
   "root": "hermes@link-dev:./esy.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#db3a0b63883606dd57c54a7158d560d6cba8cd79@d41d8cd9": {
@@ -43,8 +43,6 @@
         "@opam/ppx_rapper@opam:3.0.0@6e01d9ea",
         "@opam/dune@opam:2.9.1@1e504822",
         "@opam/dream@github:aantron/dream:dream.opam#d54b466@d41d8cd9",
-        "@opam/conf-postgresql@archive:https://ftp.postgresql.org/pub/source/v13.0/postgresql-13.0.tar.gz#sha1:8862cfd6bbf1d0fe94552d702bc581fa4f866873@ef811fad",
-        "@opam/conf-libffi@archive:https://github.com/libffi/libffi/releases/download/v3.3/libffi-3.3.tar.gz#sha1:8df6cb570c8d6596a67d1c0773bf00650154f7aa@3b20b4e1",
         "@opam/caqti-lwt@opam:1.6.0@5a311ee4",
         "@opam/caqti-driver-postgresql@opam:1.6.0@587d8716",
         "@opam/caqti@opam:1.6.0@0618d6a6",
@@ -60,22 +58,6 @@
         "@opam/alcotest-lwt@opam:1.4.0@8227b9f9",
         "@opam/alcotest@opam:1.4.0@827862b4"
       ]
-    },
-    "esy-zlib@github:esy-packages/esy-zlib#65faba12e4aed539d8fd2444fede2f1136389f6f@d41d8cd9": {
-      "id":
-        "esy-zlib@github:esy-packages/esy-zlib#65faba12e4aed539d8fd2444fede2f1136389f6f@d41d8cd9",
-      "name": "esy-zlib",
-      "version":
-        "github:esy-packages/esy-zlib#65faba12e4aed539d8fd2444fede2f1136389f6f",
-      "source": {
-        "type": "install",
-        "source": [
-          "github:esy-packages/esy-zlib#65faba12e4aed539d8fd2444fede2f1136389f6f"
-        ]
-      },
-      "overrides": [],
-      "dependencies": [],
-      "devDependencies": []
     },
     "esy-openssl@archive:https://www.openssl.org/source/openssl-1.1.1l.tar.gz#sha256:0b7a3e5e59c34827fe0c3a74b7ec8baef302b98fa80088d7f9153aa16fa76bd1@d2b1c9f1": {
       "id":
@@ -96,6 +78,22 @@
       ],
       "devDependencies": []
     },
+    "esy-libffi@github:esy-ocaml/libffi#c61127dba57b18713039ab9c1892c9f2563e280c@d41d8cd9": {
+      "id":
+        "esy-libffi@github:esy-ocaml/libffi#c61127dba57b18713039ab9c1892c9f2563e280c@d41d8cd9",
+      "name": "esy-libffi",
+      "version":
+        "github:esy-ocaml/libffi#c61127dba57b18713039ab9c1892c9f2563e280c",
+      "source": {
+        "type": "install",
+        "source": [
+          "github:esy-ocaml/libffi#c61127dba57b18713039ab9c1892c9f2563e280c"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
     "esy-help2man@github:esy-packages/esy-help2man#c8e6931d1dcf58a81bd801145a777fd3b115c443@d41d8cd9": {
       "id":
         "esy-help2man@github:esy-packages/esy-help2man#c8e6931d1dcf58a81bd801145a777fd3b115c443@d41d8cd9",
@@ -110,37 +108,6 @@
       },
       "overrides": [],
       "dependencies": [],
-      "devDependencies": []
-    },
-    "esy-autoconf@github:esy-packages/esy-autoconf#fb93edf@d41d8cd9": {
-      "id": "esy-autoconf@github:esy-packages/esy-autoconf#fb93edf@d41d8cd9",
-      "name": "esy-autoconf",
-      "version": "github:esy-packages/esy-autoconf#fb93edf",
-      "source": {
-        "type": "install",
-        "source": [ "github:esy-packages/esy-autoconf#fb93edf" ]
-      },
-      "overrides": [],
-      "dependencies": [
-        "esy-help2man@github:esy-packages/esy-help2man#c8e6931d1dcf58a81bd801145a777fd3b115c443@d41d8cd9"
-      ],
-      "devDependencies": []
-    },
-    "@reason-native-web/esy-openssl@1.1.1007@d41d8cd9": {
-      "id": "@reason-native-web/esy-openssl@1.1.1007@d41d8cd9",
-      "name": "@reason-native-web/esy-openssl",
-      "version": "1.1.1007",
-      "source": {
-        "type": "install",
-        "source": [
-          "archive:https://registry.npmjs.org/@reason-native-web/esy-openssl/-/esy-openssl-1.1.1007.tgz#sha1:1a37c64f81f5b274382cd8c725779e23853c7262"
-        ]
-      },
-      "overrides": [],
-      "dependencies": [
-        "@opam/conf-pkg-config@opam:2@85f8644d",
-        "@opam/conf-autoconf@opam:0.1@a370d1c4"
-      ],
       "devDependencies": []
     },
     "@opam/yuscii@opam:0.3.0@2283e0fc": {
@@ -1037,7 +1004,7 @@
         "ocaml@4.12.0@d41d8cd9",
         "@opam/dune-configurator@opam:2.9.1@b7cf7a02",
         "@opam/dune@opam:2.9.1@1e504822",
-        "@opam/conf-postgresql@archive:https://ftp.postgresql.org/pub/source/v13.0/postgresql-13.0.tar.gz#sha1:8862cfd6bbf1d0fe94552d702bc581fa4f866873@ef811fad",
+        "@opam/conf-postgresql@opam:1@6097544f",
         "@opam/base-bytes@opam:base@19d0c2ff",
         "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
@@ -2792,13 +2759,11 @@
       ],
       "dependencies": [
         "@opam/conf-pkg-config@opam:2@85f8644d",
-        "@opam/conf-libffi@archive:https://github.com/libffi/libffi/releases/download/v3.3/libffi-3.3.tar.gz#sha1:8df6cb570c8d6596a67d1c0773bf00650154f7aa@3b20b4e1",
+        "@opam/conf-libffi@opam:2.0.0@7c8981c5",
         "@esy-ocaml/substs@0.0.1@d41d8cd9",
         "@esy-ocaml/libffi@3.2.10@d41d8cd9"
       ],
-      "devDependencies": [
-        "@opam/conf-libffi@archive:https://github.com/libffi/libffi/releases/download/v3.3/libffi-3.3.tar.gz#sha1:8df6cb570c8d6596a67d1c0773bf00650154f7aa@3b20b4e1"
-      ]
+      "devDependencies": [ "@opam/conf-libffi@opam:2.0.0@7c8981c5" ]
     },
     "@opam/ctypes@opam:0.20.0@4e68beca": {
       "id": "@opam/ctypes@opam:0.20.0@4e68beca",
@@ -2913,41 +2878,21 @@
         "@opam/base-unix@opam:base@87d0b2eb"
       ]
     },
-    "@opam/conf-texinfo@github:esy-packages/esy-texinfo:package.json#4a05feafbbcc4c57d5d25899fbdab98961b9a69c@d41d8cd9": {
-      "id":
-        "@opam/conf-texinfo@github:esy-packages/esy-texinfo:package.json#4a05feafbbcc4c57d5d25899fbdab98961b9a69c@d41d8cd9",
-      "name": "@opam/conf-texinfo",
-      "version":
-        "github:esy-packages/esy-texinfo:package.json#4a05feafbbcc4c57d5d25899fbdab98961b9a69c",
+    "@opam/conf-postgresql@opam:1@6097544f": {
+      "id": "@opam/conf-postgresql@opam:1@6097544f",
+      "name": "@opam/conf-postgresql",
+      "version": "opam:1",
       "source": {
         "type": "install",
-        "source": [
-          "github:esy-packages/esy-texinfo:package.json#4a05feafbbcc4c57d5d25899fbdab98961b9a69c"
-        ]
+        "source": [ "no-source:" ],
+        "opam": {
+          "name": "conf-postgresql",
+          "version": "1",
+          "path": "esy.lock/opam/conf-postgresql.1"
+        }
       },
       "overrides": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    "@opam/conf-postgresql@archive:https://ftp.postgresql.org/pub/source/v13.0/postgresql-13.0.tar.gz#sha1:8862cfd6bbf1d0fe94552d702bc581fa4f866873@ef811fad": {
-      "id":
-        "@opam/conf-postgresql@archive:https://ftp.postgresql.org/pub/source/v13.0/postgresql-13.0.tar.gz#sha1:8862cfd6bbf1d0fe94552d702bc581fa4f866873@ef811fad",
-      "name": "@opam/conf-postgresql",
-      "version":
-        "archive:https://ftp.postgresql.org/pub/source/v13.0/postgresql-13.0.tar.gz#sha1:8862cfd6bbf1d0fe94552d702bc581fa4f866873",
-      "source": {
-        "type": "install",
-        "source": [
-          "archive:https://ftp.postgresql.org/pub/source/v13.0/postgresql-13.0.tar.gz#sha1:8862cfd6bbf1d0fe94552d702bc581fa4f866873"
-        ]
-      },
-      "overrides": [
-        "esy.lock/overrides/ef811fadf513170ea0b4934402900f8f/esy.json"
-      ],
-      "dependencies": [
-        "esy-zlib@github:esy-packages/esy-zlib#65faba12e4aed539d8fd2444fede2f1136389f6f@d41d8cd9",
-        "@reason-native-web/esy-openssl@1.1.1007@d41d8cd9"
-      ],
+      "dependencies": [ "@esy-ocaml/substs@0.0.1@d41d8cd9" ],
       "devDependencies": []
     },
     "@opam/conf-pkg-config@opam:2@85f8644d": {
@@ -3001,23 +2946,29 @@
       ],
       "devDependencies": []
     },
-    "@opam/conf-libffi@archive:https://github.com/libffi/libffi/releases/download/v3.3/libffi-3.3.tar.gz#sha1:8df6cb570c8d6596a67d1c0773bf00650154f7aa@3b20b4e1": {
-      "id":
-        "@opam/conf-libffi@archive:https://github.com/libffi/libffi/releases/download/v3.3/libffi-3.3.tar.gz#sha1:8df6cb570c8d6596a67d1c0773bf00650154f7aa@3b20b4e1",
+    "@opam/conf-libffi@opam:2.0.0@7c8981c5": {
+      "id": "@opam/conf-libffi@opam:2.0.0@7c8981c5",
       "name": "@opam/conf-libffi",
-      "version":
-        "archive:https://github.com/libffi/libffi/releases/download/v3.3/libffi-3.3.tar.gz#sha1:8df6cb570c8d6596a67d1c0773bf00650154f7aa",
+      "version": "opam:2.0.0",
       "source": {
         "type": "install",
-        "source": [
-          "archive:https://github.com/libffi/libffi/releases/download/v3.3/libffi-3.3.tar.gz#sha1:8df6cb570c8d6596a67d1c0773bf00650154f7aa"
-        ]
+        "source": [ "no-source:" ],
+        "opam": {
+          "name": "conf-libffi",
+          "version": "2.0.0",
+          "path": "esy.lock/opam/conf-libffi.2.0.0"
+        }
       },
       "overrides": [
-        "esy.lock/overrides/3b20b4e182b47e30cb2667607c9f9c35/esy.json"
+        {
+          "opamoverride":
+            "esy.lock/overrides/opam__s__conf_libffi_opam__c__2.0.0_opam_override"
+        }
       ],
       "dependencies": [
-        "@opam/conf-texinfo@github:esy-packages/esy-texinfo:package.json#4a05feafbbcc4c57d5d25899fbdab98961b9a69c@d41d8cd9"
+        "esy-libffi@github:esy-ocaml/libffi#c61127dba57b18713039ab9c1892c9f2563e280c@d41d8cd9",
+        "@opam/conf-pkg-config@opam:2@85f8644d",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": []
     },
@@ -3051,31 +3002,6 @@
       "overrides": [],
       "dependencies": [
         "esy-help2man@github:esy-packages/esy-help2man#c8e6931d1dcf58a81bd801145a777fd3b115c443@d41d8cd9"
-      ],
-      "devDependencies": []
-    },
-    "@opam/conf-autoconf@opam:0.1@a370d1c4": {
-      "id": "@opam/conf-autoconf@opam:0.1@a370d1c4",
-      "name": "@opam/conf-autoconf",
-      "version": "opam:0.1",
-      "source": {
-        "type": "install",
-        "source": [ "no-source:" ],
-        "opam": {
-          "name": "conf-autoconf",
-          "version": "0.1",
-          "path": "esy.lock/opam/conf-autoconf.0.1"
-        }
-      },
-      "overrides": [
-        {
-          "opamoverride":
-            "esy.lock/overrides/opam__s__conf_autoconf_opam__c__0.1_opam_override"
-        }
-      ],
-      "dependencies": [
-        "esy-autoconf@github:esy-packages/esy-autoconf#fb93edf@d41d8cd9",
-        "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": []
     },

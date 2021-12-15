@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "esy": {
     "buildEnv": {
-     "LD_LIBRARY_PATH": "#{@opam/conf-libffi.lib}:$LD_LIBRARY_PATH"
+      "LD_LIBRARY_PATH": "$LIBFFI_BUILD_DIR/lib:$LD_LIBRARY_PATH"
     }
   },
   "dependencies": {
@@ -16,9 +16,7 @@
     "@opam/caqti-lwt": "1.6.0",
     "@opam/caqti-driver-postgresql": "1.6.0",
     "@opam/archi": "*",
-    "@opam/archi-lwt": "*",
-    "@opam/conf-libffi": "*",
-    "@opam/conf-postgresql": "*"
+    "@opam/archi-lwt": "*"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "*",
@@ -34,9 +32,7 @@
     "@opam/archi": "anmonteiro/archi:archi.opam#0da4d3f",
     "@opam/archi-lwt": "anmonteiro/archi:archi-lwt.opam#0da4d3f",
     "@opam/conf-libev": "esy-packages/libev:package.json#0817b2d",
-    "esy-openssl": "esy-packages/esy-openssl#619ae2d46ca981ec26ab3287487ad98b157a01d1",
-    "@opam/conf-libffi": "ManasJayanth/esy-libffi:esy.json#dbfe621a314ac7c9336bebe80b1e84e39c40045d",
-    "@opam/conf-postgresql": "ManasJayanth/esy-postgres:esy.json#33cb05104f6c0eff27fab5c5317be773cb14c384"
+    "esy-openssl": "esy-packages/esy-openssl#619ae2d46ca981ec26ab3287487ad98b157a01d1"
   },
   "scripts": {
     "check-formatted": "esy b dune build @fmt",
