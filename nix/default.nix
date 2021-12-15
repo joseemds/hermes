@@ -27,5 +27,5 @@ in buildHermes {
     files = [ "hermes.opam" ];
   };
 
-  propagatedBuildInputs = [ dream alcotest ppx_rapper caqti-lwt caqti-driver-postgresql archi-lwt ];
+  propagatedBuildInputs = [ dream alcotest ppx_rapper ppx_rapper_lwt caqti-lwt caqti-driver-postgresql archi-lwt uuidm ptime ];
 }

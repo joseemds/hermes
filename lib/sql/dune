@@ -1,0 +1,5 @@
+(library
+ (name hermes_sql)
+ (public_name hermes.sql)
+ (modules sql)
+ (libraries ppx_rapper_lwt uuidm ptime caqti))

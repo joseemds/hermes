@@ -2,4 +2,5 @@ _build
 _esy
 _opam
 
+*.install
 node_modules

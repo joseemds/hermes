@@ -3,7 +3,7 @@ open Archi_lwt
 
 module Connection = struct
   let start () =
-    Format.eprintf "Created database connection";
+    Format.eprintf "Created database connection @.";
     Lwt_result.return Hermes.Database.Connection.connect
 
   let stop connection =
@@ -15,7 +15,7 @@ end
 
 module Migrations = struct
   let start () connection =
-    Format.eprintf "Running migrations";
+    Format.eprintf "Running migrations@.";
     Lwt_result.return (Hermes.Database.Migrations.migrate connection)
 
   let stop _migrations = Lwt.return ()
@@ -27,14 +27,16 @@ end
 module WebServer = struct
   type server = { promise_to_stop : unit Lwt.u; server_promise : unit Lwt.t }
 
-  let start () =
+  let start () _ =
+    Format.eprintf "Running webserver@.";
     let waiter, wakener = Lwt.wait () in
     let server = Hermes.server ~stop:waiter in
     Lwt_result.return { promise_to_stop = wakener; server_promise = server }
 
   let stop server = Lwt.return (Lwt.wakeup_later server.promise_to_stop ())
 
-  let component = Component.make ~start ~stop
+  let component =
+    Component.using ~start ~stop ~dependencies:[ Migrations.component ]
 end
 
 let system =

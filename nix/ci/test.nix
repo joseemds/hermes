@@ -9,16 +9,21 @@ let
   });
   hermesDrvs = lib.filterAttrs (_: value: lib.isDerivation value) hermesPkgs;
 
-in stdenv.mkDerivation {
+in stdenv.mkDerivation rec {
   name = "hermes-tests";
   src = lib.filterGitSource {
     src = ../..;
     dirs = [ "lib" "test" ];
     files = [ ".ocamlformat" "hermes.opam" "dune-project" "dune" ];
   };
+
+  inputString = builtins.unsafeDiscardStringContext hermesPkgs.outPath;
   dontBuild = true;
+  outputHashMode = "flat";
+  outputHashAlgo = "sha256";
+  outputHash = builtins.hashString "sha256" inputString;
   installPhase = ''
-    touch $out
+    echo -n $inputString > $out
   '';
   buildInputs = (lib.attrValues hermesDrvs)
     ++ (with ocamlPackages; [ ocaml dune findlib pkgs.ocamlformat ]);

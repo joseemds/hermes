@@ -10,8 +10,11 @@ in with pkgs;
 (mkShell {
   inputsFrom = lib.attrValues hermesDrvs;
   buildInputs = [
+    less
     postgresql
     git
+    inotify-tools
+    curl
   ] ++  (with ocamlPackages; [
 
     # Development packages
