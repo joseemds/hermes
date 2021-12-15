@@ -2,7 +2,6 @@ module Database = Hermes_database
 module SQL = Hermes_sql.Sql
 
 let health_check_handler _ = Dream.empty `OK
-
 let ( let* ) = Lwt.Syntax.( let* )
 
 let subscribe_handler request =

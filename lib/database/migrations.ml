@@ -3,11 +3,8 @@
 open Lwt.Infix
 
 let ( let+ ) = Lwt.Syntax.( let+ )
-
 let ( let* ) = Lwt.Syntax.( let* )
-
 let ( let**! ) = Lwt_result.Syntax.( let* )
-
 let ( let++! ) = Lwt_result.Syntax.( let+ )
 
 module Transaction = struct
