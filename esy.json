@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "esy": {
     "buildEnv": {
-      "LD_LIBRARY_PATH": "$LIBFFI_BUILD_DIR/lib:$LD_LIBRARY_PATH"
+      "LD_LIBRARY_PATH": "#{@opam/conf-libev.lib}:$LIBFFI_BUILD_DIR/lib:$LD_LIBRARY_PATH"
     }
   },
   "dependencies": {
