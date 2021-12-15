@@ -16,7 +16,8 @@
     "@opam/caqti-lwt": "1.6.0",
     "@opam/caqti-driver-postgresql": "1.6.0",
     "@opam/archi": "*",
-    "@opam/archi-lwt": "*"
+    "@opam/archi-lwt": "*",
+    "@opam/conf-libev": "*"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "*",
@@ -24,8 +25,7 @@
     "@opam/ocamlfind": "*",
     "@opam/alcotest": "1.4.0",
     "@opam/alcotest-lwt": "1.4.0",
-    "@opam/piaf": "0.1.0",
-    "@opam/conf-libev": "*"
+    "@opam/piaf": "0.1.0"
   },
   "resolutions": {
     "@opam/dream": "aantron/dream:dream.opam#d54b466",
