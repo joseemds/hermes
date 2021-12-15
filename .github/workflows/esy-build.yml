@@ -13,9 +13,7 @@
       services:
         pg:
           image: postgres:14
-          env:
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: postgres
+          env: POSTGRES_USER: postgres POSTGRES_PASSWORD: postgres
           options: >-
             --health-cmd pg_isready
             --health-interval 10s
@@ -34,9 +32,6 @@
 
       - name: Install esy
         run: npm install -g esy
-
-      - name: Install libev
-        run: sudo apt install libev-dev -y
 
       - uses: esy/github-action@v1
         with:
